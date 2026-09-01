@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Naimul Hasan | Technical Support Engineer & IT Specialist</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Personal Portfolio of MD Naimul Hasan, Technical Junior Support Engineer specializing in Web Hosting Support and Server Room Maintenance based in Dhaka, Bangladesh.">
+    <meta name="keywords" content="MD Naimul Hasan, Technical Support Engineer, Web Hosting Support, Server Maintenance, IT Infrastructure, Dhaka Bangladesh">
+    <meta name="author" content="MD Naimul Hasan">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#008080',
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#008080',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                            dark: '#0a1616',
+                            card: 'rgba(15, 25, 28, 0.65)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Hind Siliguri', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts: Hind Siliguri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Internal Styling & Custom CSS Effects -->
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #070d0e;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        /* Modern Glassmorphism Utilities */
+        .glass-panel {
+            background: rgba(15, 28, 30, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 128, 128, 0.2);
+        }
+
+        .glass-card {
+            background: rgba(18, 34, 37, 0.5);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(0, 128, 128, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -10px rgba(0, 128, 128, 0.3);
+        }
+
+        .glass-nav {
+            background: rgba(7, 13, 14, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 128, 128, 0.15);
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #5eead4 0%, #008080 50%, #0d9488 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-btn {
+            background: linear-gradient(135deg, #008080 0%, #0d9488 100%);
+            transition: all 0.3s ease;
+        }
+
+        .gradient-btn:hover {
+            background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+            box-shadow: 0 0 20px rgba(0, 128, 128, 0.5);
+        }
+
+        /* Scroll Reveal Utility Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070d0e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0f766e;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #008080;
+        }
+
+        /* Project Card Image Scroll Hover Effect */
+        .card-img-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img-container img {
+            transition: transform 3.5s ease-in-out;
+            transform: translateY(0%);
+        }
+
+        .card-img-container:hover img {
+            transform: translateY(calc(-100% + 220px));
+        }
+
+        /* Particle Overlay Background Canvas */
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="relative text-slate-200 selection:bg-teal-500 selection:text-white">
+
+    <!-- Interactive Background Canvas for Ambient Glow Particles -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-teal-600 to-teal-400 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-teal-900/40 group-hover:scale-105 transition-transform">
+                    NH
+                </div>
+                <span class="text-xl font-bold tracking-wider text-white">NAIMUL<span class="text-teal-400">.</span></span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-slate-300 hover:text-teal-400 font-medium transition-colors text-sm uppercase tracking-wider"><i class="fa-solid fa-user-gear mr-1.5 text-xs text-teal-400"></i> About</a>
+                <a href="#skills" class="text-slate-300 hover:text-teal-400 font-medium transition-colors text-sm uppercase tracking-wider"><i class="fa-solid fa-microchip mr-1.5 text-xs text-teal-400"></i> Skills</a>
+                <a href="#services" class="text-slate-300 hover:text-teal-400 font-medium transition-colors text-sm uppercase tracking-wider"><i class="fa-solid fa-server mr-1.5 text-xs text-teal-400"></i> Services</a>
+                <a href="#portfolio" class="text-slate-300 hover:text-teal-400 font-medium transition-colors text-sm uppercase tracking-wider"><i class="fa-solid fa-cubes mr-1.5 text-xs text-teal-400"></i> Projects</a>
+                <a href="#experience" class="text-slate-300 hover:text-teal-400 font-medium transition-colors text-sm uppercase tracking-wider"><i class="fa-solid fa-briefcase mr-1.5 text-xs text-teal-400"></i> Experience</a>
+                <a href="#contact" class="gradient-btn px-5 py-2.5 rounded-full text-white text-sm font-semibold shadow-md flex items-center space-x-2">
+                    <span>Contact Me</span>
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                </a>
+            </nav>
+
+            <!-- Mobile Toggle Button -->
+            <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2">
+                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-teal-500/20 px-6 py-6 transition-all space-y-4">
+            <a href="#about" class="mobile-link block text-slate-200 hover:text-teal-400 font-medium text-lg"><i class="fa-solid fa-user-gear mr-2 text-teal-400"></i> About</a>
+            <a href="#skills" class="mobile-link block text-slate-200 hover:text-teal-400 font-medium text-lg"><i class="fa-solid fa-microchip mr-2 text-teal-400"></i> Skills</a>
+            <a href="#services" class="mobile-link block text-slate-200 hover:text-teal-400 font-medium text-lg"><i class="fa-solid fa-server mr-2 text-teal-400"></i> Services</a>
+            <a href="#portfolio" class="mobile-link block text-slate-200 hover:text-teal-400 font-medium text-lg"><i class="fa-solid fa-cubes mr-2 text-teal-400"></i> Projects</a>
+            <a href="#experience" class="mobile-link block text-slate-200 hover:text-teal-400 font-medium text-lg"><i class="fa-solid fa-briefcase mr-2 text-teal-400"></i> Experience</a>
+            <a href="#contact" class="mobile-link gradient-btn block text-center py-3 rounded-xl text-white font-semibold shadow-lg">
+                <i class="fa-solid fa-paper-plane mr-2"></i> Get In Touch
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="relative z-10">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+
+                <!-- Left Column Text Info -->
+                <div class="lg:col-span-7 space-y-6 reveal">
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-panel border border-teal-500/30 text-teal-300 text-sm font-medium animate-pulse-slow">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 inline-block"></span>
+                        <span>Available for Support & System Roles</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Hi, I'm <span id="hero-name" class="gradient-text">MD Naimul Hasan</span>
+                    </h1>
+
+                    <div class="text-xl sm:text-2xl font-semibold text-slate-300 flex items-center space-x-2 min-h-[40px]">
+                        <span>I am a</span>
+                        <span id="typing-text" class="text-teal-400 font-bold border-r-2 border-teal-400 pr-1"></span>
+                    </div>
+
+                    <p id="hero-bio" class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+                        Dedicated Technical Support Engineer with specialized focus on Web Hosting Environment Troubleshooting, DNS Configurations, CPanel/WHM Administration, and Server Room Physical & Cloud Infrastructure Operations.
+                    </p>
+
+                    <!-- Contact & CTA Buttons -->
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#contact" class="gradient-btn px-7 py-3.5 rounded-xl font-bold text-white shadow-lg shadow-teal-900/30 flex items-center space-x-3 hover:scale-105 transition-transform">
+                            <span>Get Technical Support</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#portfolio" class="glass-panel hover:bg-teal-900/30 border border-teal-500/30 px-7 py-3.5 rounded-xl font-semibold text-teal-300 flex items-center space-x-2 transition-all">
+                            <i class="fa-solid fa-folder-open"></i>
+                            <span>View Work</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="pt-6 border-t border-slate-800/80 flex items-center space-x-6">
+                        <span class="text-xs uppercase font-semibold text-slate-400 tracking-wider">Connect With Me:</span>
+                        <div id="hero-socials" class="flex items-center space-x-4">
+                            <!-- Injected by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Avatar Glass Visual -->
+                <div class="lg:col-span-5 flex justify-center reveal">
+                    <div class="relative group">
+                        <!-- Glowing backdrop -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-3xl blur-2xl opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+
+                        <!-- Card Wrap -->
+                        <div class="relative glass-card rounded-3xl p-4 sm:p-6 border border-teal-500/30 w-full max-w-sm sm:max-w-md animate-float">
+                            <div class="relative rounded-2xl overflow-hidden aspect-square bg-slate-900">
+                              <img id="hero-avatar" src="https://user28288.na.imgto.link/public/20260831/picsart-24-05-12-22-24-22-255.avif" alt="MD Naimul Hasan" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-700" onerror="this.src='https://user28288.na.imgto.link/public/20260831/picsart-24-05-12-22-24-22-255.avif'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
+                            </div>
+
+                            <!-- Floating Tech Badges -->
+                            <div class="absolute -bottom-4 -left-4 glass-panel border border-teal-500/40 px-4 py-2.5 rounded-2xl flex items-center space-x-3 shadow-xl">
+                                <div class="w-10 h-10 rounded-xl bg-teal-500/20 flex items-center justify-center text-teal-400">
+                                    <i class="fa-solid fa-server text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 font-medium">Server Status</p>
+                                    <p class="text-xs font-bold text-emerald-400 flex items-center"><span class="w-2 h-2 rounded-full bg-emerald-400 mr-1.5 animate-ping"></span> 99.9% Uptime</p>
+                                </div>
+                            </div>
+
+                            <div class="absolute -top-4 -right-4 glass-panel border border-teal-500/40 px-4 py-2.5 rounded-2xl flex items-center space-x-3 shadow-xl">
+                                <div class="w-10 h-10 rounded-xl bg-teal-500/20 flex items-center justify-center text-teal-400">
+                                    <i class="fa-solid fa-headset text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 font-medium">Response Time</p>
+                                    <p class="text-xs font-bold text-white">&lt; 15 Mins</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Stats Overview Section -->
+        <section class="py-12 bg-slate-950/40 border-y border-slate-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="glass-card p-6 rounded-2xl">
+                        <p class="text-3xl sm:text-4xl font-extrabold text-teal-400 mb-1">24/7</p>
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium uppercase tracking-wider">Hosting Support</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <p class="text-3xl sm:text-4xl font-extrabold text-teal-400 mb-1">500+</p>
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium uppercase tracking-wider">Tickets Resolved</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <p class="text-3xl sm:text-4xl font-extrabold text-teal-400 mb-1">99.9%</p>
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium uppercase tracking-wider">Server Maintenance</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <p class="text-3xl sm:text-4xl font-extrabold text-teal-400 mb-1">100%</p>
+                        <p class="text-xs sm:text-sm text-slate-400 font-medium uppercase tracking-wider">Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-xs font-bold text-teal-400 uppercase tracking-widest mb-2"><i class="fa-solid fa-user text-xs mr-2"></i> Professional Summary</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Dedicated Support & Server Maintenance</h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-teal-500 to-teal-300 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Left Details Box -->
+                <div class="lg:col-span-7 glass-card p-8 rounded-3xl space-y-6 reveal">
+                    <h4 class="text-2xl font-bold text-white flex items-center">
+                        <i class="fa-solid fa-shield-halved text-teal-400 mr-3"></i> Support & Operations Specialist
+                    </h4>
+                    <p id="about-description-1" class="text-slate-300 leading-relaxed">
+                        I specialize in providing tier-1 and tier-2 web hosting support, managing cPanel/WHM environments, resolving DNS records issues, SSL installation, website migrations, and ensuring smooth web application delivery.
+                    </p>
+                    <p id="about-description-2" class="text-slate-400 leading-relaxed text-sm">
+                        In addition to hosting administration, I am experienced in physical server room maintenance, rack cable management, hardware diagnostic checks, UPS power redundancy monitoring, and maintaining optimal thermal environments.
+                    </p>
+
+                    <!-- Quick Information Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-sm border-t border-slate-800">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-location-dot text-teal-400 w-5"></i>
+                            <span class="text-slate-400">Location:</span>
+                            <span id="about-location" class="text-white font-medium">Dhaka, Bangladesh</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-envelope text-teal-400 w-5"></i>
+                            <span class="text-slate-400">Email:</span>
+                            <span id="about-email" class="text-white font-medium">naimuljabed74@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone text-teal-400 w-5"></i>
+                            <span class="text-slate-400">Phone:</span>
+                            <span id="about-phone" class="text-white font-medium">01689364463</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-language text-teal-400 w-5"></i>
+                            <span class="text-slate-400">Languages:</span>
+                            <span class="text-white font-medium">English, Bengali</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Cards -->
+                <div class="lg:col-span-5 grid grid-cols-1 gap-4 reveal">
+                    <div class="glass-card p-6 rounded-2xl flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 shrink-0">
+                            <i class="fa-solid fa-network-wired text-xl"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold text-white mb-1">Web Hosting Administration</h5>
+                            <p class="text-xs text-slate-400">cPanel, WHM, Linux CLI, Nginx, Apache, MySQL administration, DNS zones, and email routing.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 shrink-0">
+                            <i class="fa-solid fa-server text-xl"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold text-white mb-1">Server Room Maintenance</h5>
+                            <p class="text-xs text-slate-400">Rack mounting, structured Ethernet cabling, thermal checks, server backups, hardware monitoring.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 shrink-0">
+                            <i class="fa-solid fa-screwdriver-wrench text-xl"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold text-white mb-1">Technical Troubleshooting</h5>
+                            <p class="text-xs text-slate-400">500 internal server errors, database connection repairs, malware cleanup, and site performance tuning.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-950/30">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-xs font-bold text-teal-400 uppercase tracking-widest mb-2"><i class="fa-solid fa-sliders text-xs mr-2"></i> Technical Expertise</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Skills & Competencies</h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-teal-500 to-teal-300 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div id="skills-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamically Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-xs font-bold text-teal-400 uppercase tracking-widest mb-2"><i class="fa-solid fa-list-check text-xs mr-2"></i> What I Offer</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Professional Support Services</h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-teal-500 to-teal-300 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div id="services-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Portfolio / Projects Section -->
+        <section id="portfolio" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-950/40">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-xs font-bold text-teal-400 uppercase tracking-widest mb-2"><i class="fa-solid fa-diagram-project text-xs mr-2"></i> Case Studies & Labs</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Featured Projects & Systems</h3>
+                <p class="text-slate-400 text-sm mt-2">Hover over project images for a smooth scroll preview.</p>
+                <div class="w-16 h-1 bg-gradient-to-r from-teal-500 to-teal-300 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Work Experience / Timeline Section -->
+        <section id="experience" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-xs font-bold text-teal-400 uppercase tracking-widest mb-2"><i class="fa-solid fa-timeline text-xs mr-2"></i> Career Journey</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Work Experience</h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-teal-500 to-teal-300 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto relative border-l-2 border-teal-500/30 pl-6 sm:pl-10 space-y-12" id="experience-container">
+                <!-- Dynamically Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Contact & Location Map Section -->
+        <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-xs font-bold text-teal-400 uppercase tracking-widest mb-2"><i class="fa-solid fa-envelope text-xs mr-2"></i> Get In Touch</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Contact & Support Inquiry</h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-teal-500 to-teal-300 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
+                <!-- Left Info Box -->
+                <div class="lg:col-span-5 glass-card p-8 rounded-3xl space-y-8 reveal">
+                    <div>
+                        <h4 class="text-2xl font-bold text-white mb-2">Let's Connect</h4>
+                        <p class="text-slate-400 text-sm">Have a hosting issue, server maintenance task, or support requirement? Reach out anytime.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-user-gear text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Name</p>
+                                <p id="contact-info-name" class="text-white font-medium">MD Naimul Hasan</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-phone text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Phone Number</p>
+                                <a id="contact-info-phone" href="tel:01689364463" class="text-white font-medium hover:text-teal-400 transition-colors">01689364463</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-envelope text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Email Address</p>
+                                <a id="contact-info-email" href="mailto:naimuljabed74@gmail.com" class="text-white font-medium hover:text-teal-400 transition-colors">naimuljabed74@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-location-dot text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Location</p>
+                                <p id="contact-info-location" class="text-white font-medium">Dhaka, Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form Container -->
+                <div class="lg:col-span-7 glass-card p-8 rounded-3xl reveal">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Name *</label>
+                                <input type="text" id="form-name" required placeholder="John Doe" class="w-full bg-slate-900/60 border border-slate-700/80 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-teal-400 transition-colors text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Phone Number *</label>
+                                <input type="tel" id="form-phone" required placeholder="+880 1700-000000" class="w-full bg-slate-900/60 border border-slate-700/80 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-teal-400 transition-colors text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email Address *</label>
+                            <input type="email" id="form-email" required placeholder="name@domain.com" class="w-full bg-slate-900/60 border border-slate-700/80 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-teal-400 transition-colors text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Message *</label>
+                            <textarea id="form-message" rows="4" required placeholder="Describe your hosting support or server room query..." class="w-full bg-slate-900/60 border border-slate-700/80 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-teal-400 transition-colors text-sm resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" id="form-submit-btn" class="w-full gradient-btn py-4 rounded-xl font-bold text-white shadow-lg shadow-teal-900/40 flex items-center justify-center space-x-2 text-sm tracking-wider uppercase">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Styled Google Maps Section -->
+            <div class="glass-card p-4 rounded-3xl overflow-hidden reveal">
+                <div class="w-full h-80 rounded-2xl overflow-hidden relative">
+                    <iframe id="google-map-iframe" class="w-full h-full border-0 filter grayscale invert opacity-80 hover:opacity-100 transition-opacity" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233667.8223908687!2d90.25487215276595!3d23.78088745620874!2m3!1f0!f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-900 bg-slate-950 py-12 text-sm text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-teal-600 flex items-center justify-center text-white font-bold text-sm">
+                    NH
+                </div>
+                <span class="text-white font-bold tracking-wider">MD NAIMUL HASAN</span>
+            </div>
+
+            <p class="text-center">
+                © <span id="current-year"></span> MD Naimul Hasan. Technical Junior Support Engineer.
+            </p>
+
+            <div id="footer-socials" class="flex items-center space-x-4">
+                <!-- Dynamically Populated by JS -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Modal for Alerts (No Native Browser Alerts) -->
+    <div id="custom-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
+        <div class="glass-panel border border-teal-500/40 p-6 rounded-2xl max-w-md w-full text-center space-y-4 shadow-2xl">
+            <div id="modal-icon" class="w-14 h-14 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center mx-auto text-2xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 id="modal-title" class="text-xl font-bold text-white">Message Sent</h3>
+            <p id="modal-body" class="text-sm text-slate-300">Thank you! Your message has been received.</p>
+            <button id="modal-close-btn" class="gradient-btn px-6 py-2.5 rounded-xl font-semibold text-white text-sm w-full">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- MAIN JAVASCRIPT & DYNAMIC DATA MANAGEMENT -->
+    <script>
+        /**
+         * ------------------------------------------------------------------
+         * DYNAMIC DATA MANAGEMENT CONFIGURATION
+         * All content across the site is managed in this central variable.
+         * ------------------------------------------------------------------
+         */
+        const PORTFOLIO_DATA = {
+            personal: {
+                name: "MD Naimul Hasan",
+                titles: [
+                    "Technical Support Engineer",
+                    "Web Hosting Support Specialist",
+                    "Server Room Maintenance Tech",
+                    "Linux & cPanel Admin"
+                ],
+                phone: "01689364463",
+                email: "naimuljabed74@gmail.com",
+                location: "Dhaka, Bangladesh",
+                profileImage: "https://user28288.na.imgto.link/public/20260831/chatgpt-image-aug-31-2026-06-01-24-pm.avif",
+                aboutBio1: "I am MD Naimul Hasan, a Technical Junior Support Engineer specializing primarily in web hosting support and server room maintenance based in Dhaka, Bangladesh.",
+                aboutBio2: "I diagnose website availability issues, DNS propagation delays, cPanel/WHM configurations, SSL setup, email delivery problems, and handle hands-on physical server room hardware racking, patch cabling, and thermal checks."
+            },
+
+            // Integrations Configuration
+            integrations: {
+                telegramBotToken: "", // Optional: Your Telegram Bot Token
+                telegramChatId: "",   // Optional: Your Telegram Chat ID
+                googleScriptUrl: ""   // Optional: Google Apps Script Web App Endpoint for Google Sheets
+            },
+
+            socialLinks: [
+                { name: "LinkedIn", icon: "fa-brands fa-linkedin-in", url: "https://linkedin.com" },
+                { name: "GitHub", icon: "fa-brands fa-github", url: "https://github.com" },
+                { name: "Facebook", icon: "fa-brands fa-facebook-f", url: "https://www.facebook.com/share/1JHDsTMGcX/?mibextid=wwXIfr" },
+                { name: "WhatsApp", icon: "fa-brands fa-whatsapp", url: "https://wa.me/qr/MXKGQAC6L6W3G1" }
+            ],
+
+            skills: [
+                {
+                    category: "Web Hosting Administration",
+                    icon: "fa-solid fa-server",
+                    items: [
+                        { name: "cPanel & WHM Management", level: 90 },
+                        { name: "DNS Records & Propagation", level: 92 },
+                        { name: "SSL & Domain Setup", level: 95 },
+                        { name: "Apache & Nginx Web Server", level: 85 }
+                    ]
+                },
+                {
+                    category: "Server Room & Hardware",
+                    icon: "fa-solid fa-hard-drive",
+                    items: [
+                        { name: "Rack Cabling & Patching", level: 88 },
+                        { name: "Hardware Diagnostics", level: 85 },
+                        { name: "UPS & Power Redundancy", level: 80 },
+                        { name: "Thermal & Climate Monitoring", level: 90 }
+                    ]
+                },
+                {
+                    category: "Troubleshooting & Systems",
+                    icon: "fa-solid fa-wrench",
+                    items: [
+                        { name: "Linux CLI & Bash Basics", level: 82 },
+                        { name: "MySQL & Database Connectivity", level: 80 },
+                        { name: "Website Migration", level: 90 },
+                        { name: "Email Routing (DKIM/SPF/DMARC)", level: 88 }
+                    ]
+                }
+            ],
+
+            services: [
+                {
+                    title: "Web Hosting Support",
+                    icon: "fa-solid fa-cloud-bolt",
+                    description: "Prompt resolution for 50x server errors, SSL issues, cPanel user account provisioning, and domain routing setups."
+                },
+                {
+                    title: "Server Room Maintenance",
+                    icon: "fa-solid fa-network-wired",
+                    description: "Physical server rack installation, Ethernet labeling, hardware component replacement, and environmental monitoring."
+                },
+                {
+                    title: "Website & Data Migration",
+                    icon: "fa-solid fa-database",
+                    description: "Seamless transfer of website files, databases, cPanel accounts, and email mailboxes with zero downtime."
+                },
+                {
+                    title: "DNS & Email Configuration",
+                    icon: "fa-solid fa-envelope-circle-check",
+                    description: "Configuration of A, CNAME, MX, TXT records alongside SPF, DKIM, and DMARC for optimal email deliverability."
+                },
+                {
+                    title: "Malware Cleanup & Security",
+                    icon: "fa-solid fa-shield-virus",
+                    description: "Identifying basic web application exploits, conducting virus scans, restoring clean backups, and applying basic firewalls."
+                },
+                {
+                    title: "24/7 Monitoring & Ticket Support",
+                    icon: "fa-solid fa-headset",
+                    description: "Continuous monitoring of server uptime, reactive ticket assistance, and documentation of system incidents."
+                }
+            ],
+
+            projects: [
+                {
+                    title: "Cloud Hosting Automation Lab",
+                    category: "Web Hosting",
+                    description: "Configured WHM automated backup scripts, automated cPanel account creation, and established SSL auto-renewal triggers.",
+                    technologies: ["cPanel/WHM", "Linux", "Bash", "SSL"],
+                    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
+                    liveLink: "#",
+                    githubLink: "#"
+                },
+                {
+                    title: "Server Room Infrastructure Re-Cabling",
+                    category: "Hardware",
+                    description: "Restructured unstructured patch panels, applied color-coded Ethernet labeling, and optimized thermal airflow inside rack units.",
+                    technologies: ["Structured Cabling", "Rack Mounting", "Diagnostics"],
+                    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800",
+                    liveLink: "#",
+                    githubLink: "#"
+                },
+                {
+                    title: "Enterprise Web Migration Project",
+                    category: "Migration",
+                    description: "Successfully migrated over 40+ client WordPress and Custom PHP sites across hosts with full database integrity.",
+                    technologies: ["MySQL", "WordPress", "FTP/SSH", "DNS"],
+                    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+                    liveLink: "#",
+                    githubLink: "#"
+                }
+            ],
+
+            experience: [
+                {
+                    role: "Technical Junior Support Engineer",
+                    company: "Web Hosting & Infrastructure Firm",
+                    period: "2024 - Present",
+                    location: "Dhaka, Bangladesh",
+                    points: [
+                        "Managing client hosting tickets via WHMCS and Zendesk with high first-contact resolution rates.",
+                        "Handling routine physical inspections inside server room racks and monitoring hardware temperature indicators.",
+                        "Troubleshooting DNS, cPanel configuration errors, database connection issues, and mail delivery failures."
+                    ]
+                },
+                {
+                    role: "Junior Server Room Assistant",
+                    company: "IT Solutions & Datacenter Services",
+                    period: "2023 - 2024",
+                    location: "Dhaka, Bangladesh",
+                    points: [
+                        "Assisted senior engineers with server rack hardware mounting and network patch cabling.",
+                        "Performed manual and automated data backup verifications across storage arrays.",
+                        "Monitored server room UPS power backups and environmental control systems."
+                    ]
+                }
+            ]
+        };
+
+        // --- Core Application Execution on DOM Load ---
+        document.addEventListener('DOMContentLoaded', () => {
+            initPortfolioData();
+            initTypingEffect();
+            initScrollReveal();
+            initBackgroundCanvas();
+            initFormHandling();
+            initNavigation();
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+
+        // Populate Static and Dynamic Data
+        function initPortfolioData() {
+            const data = PORTFOLIO_DATA;
+
+            // Personal Info Text
+            document.getElementById('hero-name').textContent = data.personal.name;
+            document.getElementById('hero-avatar').src = data.personal.profileImage;
+            document.getElementById('about-description-1').textContent = data.personal.aboutBio1;
+            document.getElementById('about-description-2').textContent = data.personal.aboutBio2;
+            document.getElementById('about-location').textContent = data.personal.location;
+            document.getElementById('about-email').textContent = data.personal.email;
+            document.getElementById('about-phone').textContent = data.personal.phone;
+
+            // Contact Section Text
+            document.getElementById('contact-info-name').textContent = data.personal.name;
+            document.getElementById('contact-info-phone').textContent = data.personal.phone;
+            document.getElementById('contact-info-phone').href = `tel:${data.personal.phone}`;
+            document.getElementById('contact-info-email').textContent = data.personal.email;
+            document.getElementById('contact-info-email').href = `mailto:${data.personal.email}`;
+            document.getElementById('contact-info-location').textContent = data.personal.location;
+
+            // Render Social Icons
+            const heroSocials = document.getElementById('hero-socials');
+            const footerSocials = document.getElementById('footer-socials');
+            heroSocials.innerHTML = '';
+            footerSocials.innerHTML = '';
+
+            data.socialLinks.forEach(item => {
+                const linkEl = `<a href="${item.url}" target="_blank" rel="noopener" aria-label="${item.name}" class="w-10 h-10 rounded-xl glass-panel border border-teal-500/30 flex items-center justify-center text-slate-300 hover:text-teal-400 hover:border-teal-400 transition-all"><i class="${item.icon}"></i></a>`;
+                heroSocials.innerHTML += linkEl;
+                footerSocials.innerHTML += linkEl;
+            });
+
+            // Render Skills
+            const skillsContainer = document.getElementById('skills-container');
+            skillsContainer.innerHTML = '';
+            data.skills.forEach(group => {
+                let itemsHtml = '';
+                group.items.forEach(skill => {
+                    itemsHtml += `
+                        <div class="space-y-1.5">
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span class="text-slate-300">${skill.name}</span>
+                                <span class="text-teal-400">${skill.level}%</span>
+                            </div>
+                            <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-teal-600 to-teal-400 rounded-full" style="width: ${skill.level}%"></div>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                skillsContainer.innerHTML += `
+                    <div class="glass-card p-6 rounded-3xl space-y-6 reveal">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400">
+                                <i class="${group.icon}"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-white">${group.category}</h4>
+                        </div>
+                        <div class="space-y-4">
+                            ${itemsHtml}
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Render Services
+            const servicesContainer = document.getElementById('services-container');
+            servicesContainer.innerHTML = '';
+            data.services.forEach(service => {
+                servicesContainer.innerHTML += `
+                    <div class="glass-card p-8 rounded-3xl space-y-4 reveal group hover:border-teal-500/50">
+                        <div class="w-14 h-14 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 text-2xl group-hover:scale-110 transition-transform">
+                            <i class="${service.icon}"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">${service.title}</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">${service.description}</p>
+                    </div>
+                `;
+            });
+
+            // Render Projects
+            const projectsContainer = document.getElementById('projects-container');
+            projectsContainer.innerHTML = '';
+            data.projects.forEach(project => {
+                let techBadges = project.technologies.map(t => `<span class="px-2.5 py-1 rounded-md bg-teal-950/80 border border-teal-500/30 text-teal-300 text-xs">${t}</span>`).join('');
+
+                projectsContainer.innerHTML += `
+                    <div class="glass-card rounded-3xl overflow-hidden reveal flex flex-col h-full">
+                        <div class="card-img-container h-56 bg-slate-900 w-full relative">
+                            <img src="${project.image}" alt="${project.title}" class="w-full object-cover">
+                            <div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-teal-400 text-xs font-semibold border border-teal-500/30">
+                                ${project.category}
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+                            <div class="space-y-2">
+                                <h4 class="text-xl font-bold text-white">${project.title}</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">${project.description}</p>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex flex-wrap gap-2">
+                                    ${techBadges}
+                                </div>
+                                <div class="flex items-center space-x-3 pt-2">
+                                    <a href="${project.liveLink}" class="flex-1 gradient-btn py-2.5 rounded-xl text-center text-xs font-semibold text-white flex items-center justify-center space-x-2">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        <span>Preview</span>
+                                    </a>
+                                    <a href="${project.githubLink}" class="px-4 py-2.5 rounded-xl glass-panel border border-slate-700 hover:border-teal-400 text-slate-300 hover:text-white text-xs font-semibold">
+                                        <i class="fa-brands fa-github text-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Render Experience
+            const expContainer = document.getElementById('experience-container');
+            expContainer.innerHTML = '';
+            data.experience.forEach(exp => {
+                let pointsList = exp.points.map(p => `<li class="flex items-start"><i class="fa-solid fa-check text-teal-400 mr-2 mt-1 text-xs"></i><span>${p}</span></li>`).join('');
+
+                expContainer.innerHTML += `
+                    <div class="relative reveal">
+                        <!-- Timeline Dot -->
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-teal-500 border-4 border-slate-950 shadow-lg shadow-teal-500/50"></div>
+
+                        <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-4">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+                                <div>
+                                    <h4 class="text-xl font-bold text-white">${exp.role}</h4>
+                                    <p class="text-teal-400 text-sm font-medium">${exp.company}</p>
+                                </div>
+                                <div class="flex items-center space-x-2 text-xs text-slate-400 bg-slate-900 px-3 py-1.5 rounded-full w-max border border-slate-800">
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <span>${exp.period}</span>
+                                </div>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300">
+                                ${pointsList}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Typing Effect for Hero Title
+        function initTypingEffect() {
+            const titles = PORTFOLIO_DATA.personal.titles;
+            const typingElement = document.getElementById('typing-text');
+            let titleIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentTitle = titles[titleIndex];
+
+                if (isDeleting) {
+                    typingElement.textContent = currentTitle.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typingElement.textContent = currentTitle.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                let typeSpeed = isDeleting ? 40 : 80;
+
+                if (!isDeleting && charIndex === currentTitle.length) {
+                    typeSpeed = 2000; // Pause at end
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    titleIndex = (titleIndex + 1) % titles.length;
+                    typeSpeed = 500;
+                }
+
+                setTimeout(type, typeSpeed);
+            }
+
+            type();
+        }
+
+        // Scroll Reveal Animation (Intersection Observer)
+        function initScrollReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
+        // Particle Ambient Background Canvas
+        function initBackgroundCanvas() {
+            const canvas = document.getElementById('bg-canvas');
+            const ctx = canvas.getContext('2d');
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            window.addEventListener('resize', resize);
+            resize();
+
+            const particles = Array.from({ length: 35 }, () => ({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 2 + 1,
+                dx: (Math.random() - 0.5) * 0.4,
+                dy: (Math.random() - 0.5) * 0.4,
+                alpha: Math.random() * 0.5 + 0.1
+            }));
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                particles.forEach(p => {
+                    p.x += p.dx;
+                    p.y += p.dy;
+
+                    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+                    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(0, 128, 128, ${p.alpha})`;
+                    ctx.fill();
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        }
+
+        // Contact Form Processing (Telegram Bot API & Google Web App Integration Ready)
+        function initFormHandling() {
+            const form = document.getElementById('contact-form');
+            const submitBtn = document.getElementById('form-submit-btn');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const name = document.getElementById('form-name').value.trim();
+                const phone = document.getElementById('form-phone').value.trim();
+                const email = document.getElementById('form-email').value.trim();
+                const message = document.getElementById('form-message').value.trim();
+
+                if (!name || !phone || !email || !message) {
+                    showModal("Error", "Please fill in all required fields.", "error");
+                    return;
+                }
+
+                // Set Loading State
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i><span>Sending...</span>`;
+
+                let success = true;
+
+                // 1. Send via Telegram Bot API (If Configured)
+                if (PORTFOLIO_DATA.integrations.telegramBotToken && PORTFOLIO_DATA.integrations.telegramChatId) {
+                    try {
+                        const tgMsg = `📩 *New Website Contact Inquiry*\n\n👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n✉️ *Email:* ${email}\n💬 *Message:* ${message}`;
+                        await fetch(`https://api.telegram.org/bot${PORTFOLIO_DATA.integrations.telegramBotToken}/sendMessage`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                chat_id: PORTFOLIO_DATA.integrations.telegramChatId,
+                                text: tgMsg,
+                                parse_mode: 'Markdown'
+                            })
+                        });
+                    } catch (err) {
+                        console.error('Telegram submission error:', err);
+                    }
+                }
+
+                // 2. Send via Google Web App Endpoint (If Configured)
+                if (PORTFOLIO_DATA.integrations.googleScriptUrl) {
+                    try {
+                        await fetch(PORTFOLIO_DATA.integrations.googleScriptUrl, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ name, phone, email, message, date: new Date().toISOString() })
+                        });
+                    } catch (err) {
+                        console.error('Google Script submission error:', err);
+                    }
+                }
+
+                // Simulate brief network delay for smooth UX
+                await new Promise(r => setTimeout(r, 800));
+
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i><span>Send Message</span>`;
+
+                form.reset();
+                showModal("Message Sent!", "Thank you for reaching out. MD Naimul Hasan will contact you shortly.", "success");
+            });
+
+            // Modal Handlers
+            document.getElementById('modal-close-btn').addEventListener('click', closeModal);
+            document.getElementById('custom-modal').addEventListener('click', (e) => {
+                if (e.target.id === 'custom-modal') closeModal();
+            });
+        }
+
+        function showModal(title, text, type = 'success') {
+            const modal = document.getElementById('custom-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+            const modalIcon = document.getElementById('modal-icon');
+
+            modalTitle.textContent = title;
+            modalBody.textContent = text;
+
+            if (type === 'error') {
+                modalIcon.className = "w-14 h-14 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center mx-auto text-2xl";
+                modalIcon.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i>`;
+            } else {
+                modalIcon.className = "w-14 h-14 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center mx-auto text-2xl";
+                modalIcon.innerHTML = `<i class="fa-solid fa-circle-check"></i>`;
+            }
+
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('custom-modal').classList.add('hidden');
+        }
+
+        // Mobile Menu Drawer and Navigation Controls
+        function initNavigation() {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
