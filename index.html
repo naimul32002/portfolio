@@ -1037,7 +1037,7 @@
                 // 1. Send via Telegram Bot API (If Configured)
                 if (PORTFOLIO_DATA.integrations.telegramBotToken && PORTFOLIO_DATA.integrations.telegramChatId) {
                     try {
-                        const tgMsg = `📩 *New Website Contact Inquiry*\n\n👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n✉️ *Email:* ${email}\n💬 *Message:* ${message}`;
+                        const tgMsg = `📩 *New Potential Client*\n\n👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n✉️ *Email:* ${email}\n💬 *Message:* ${message}`;
                         await fetch(`https://api.telegram.org/bot${PORTFOLIO_DATA.integrations.telegramBotToken}/sendMessage`, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
